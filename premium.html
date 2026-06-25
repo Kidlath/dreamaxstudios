@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamax Studios | Hadithi za Kulipia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-neutral-950 text-zinc-100 min-h-screen flex flex-col justify-between">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="border-b border-zinc-800 bg-neutral-950/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-full border border-zinc-700 bg-zinc-800 flex items-center justify-center overflow-hidden">
+                        <img src="img/Dreamax logo.png" class="h-full w-full object-cover">
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-wide">Dreamax <span class="text-amber-500">Studios</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-zinc-400 hover:text-white transition pb-1">Nyumbani</a>
+                    <a href="free.html" class="text-zinc-400 hover:text-white transition pb-1">Hadithi za Bure</a>
+                    <a href="premium.html" class="text-amber-500 border-b-2 border-amber-500 pb-1">Hadithi za Kulipia</a>
+                    <a href="about.html" class="text-zinc-400 hover:text-white transition pb-1">Kuhusu Sisi</a>
+                    <a href="contact.html" class="text-zinc-400 hover:text-white transition pb-1">Wasiliana Nasi</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://wa.me/255699223926" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold px-5 py-2 rounded-full text-xs transition uppercase tracking-wider flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-400 hover:text-white focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-zinc-800 bg-neutral-950">
+            <a href="index.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Nyumbani</a>
+            <a href="free.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Hadithi za Bure</a>
+            <a href="premium.html" class="block text-amber-500 py-2 font-medium">Hadithi za Kulipia</a>
+            <a href="about.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Kuhusu Sisi</a>
+            <a href="contact.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Wasiliana Nasi</a>
+            <a href="https://wa.me/255699223926" target="_blank" class="block text-center bg-amber-500 text-neutral-950 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider">WhatsApp Chat</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow">
+        <div class="mb-12 text-center md:text-left">
+            <span class="text-amber-500 text-xs font-semibold tracking-wider uppercase">Hadithi Kamili</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-3">Hadithi za Premium</h1>
+            <p class="text-zinc-400 text-sm max-w-xl">Pata hadithi nzima zilizokamilika kwa urahisi. Baada ya kubonyeza kitufe, utatumiwa moja kwa moja WhatsApp kukamilisha ununuzi.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Book Card 1 -->
+            <div class="bg-zinc-900/30 border border-zinc-850 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 hover:border-amber-500/20 transition duration-300">
+                <!-- Cover Image -->
+                <div class="w-full sm:w-40 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-zinc-800 bg-zinc-950 shrink-0">
+                    <img src="img/madam president.jpg" onerror="this.src='https://images.unsplash.com/photo-518372712866-51101890197b?q=80&w=400'" alt="Machozi ya Ushindi Cover" class="w-full h-full object-cover">
+                </div>
+                <!-- Details -->
+                <div class="flex flex-col justify-between flex-grow">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[10px] font-bold text-amber-500 tracking-wider uppercase">Siasa na Mapambano</span>
+                            <span class="text-white text-xs font-bold bg-zinc-800 px-2 py-0.5 rounded">TZS 3,000</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-white mb-2">Madam President (Muheshimiwa Rais)</h2>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6 line-clamp-4">Ukurasa kwa ukurasa, simulizi hii inakufunulia nguvu ya ujasiri wa mwanamke huyu Rais wa nchi aliyepoteza kila kitu akijitahidi kulinda raia wa nchi yake wanaouawa, kunyonywa na kudhulumiwa...</p>
+                    </div>
+                    <a href="https://wa.me/255699223926?text=Habari%20Dreamax%20Studios,%20nahitaji%20kununua%20hadithi%20ya%20*Madam%20President%20(Muheshimiwa Rais)*" target="_blank" class="w-full text-center bg-amber-500 hover:bg-amber-600 text-neutral-950 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> Nunua kwa WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Book Card 2 -->
+            <div class="bg-zinc-900/30 border border-zinc-850 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 hover:border-amber-500/20 transition duration-300">
+                <!-- Cover Image -->
+                <div class="w-full sm:w-40 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-zinc-800 bg-zinc-950 shrink-0">
+                    <img src="img/hakuna.jpg" onerror="this.src='https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=400'" alt="Siri ya Nyumba ya Udongo Cover" class="w-full h-full object-cover">
+                </div>
+                <!-- Details -->
+                <div class="flex flex-col justify-between flex-grow">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[10px] font-bold text-amber-500 tracking-wider uppercase">Kusisimua na Kutisha</span>
+                            <span class="text-white text-xs font-bold bg-zinc-800 px-2 py-0.5 rounded">TZS 5,000</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-white mb-2">Hakuna Atayebakia</h2>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6 line-clamp-4">Mfululizo wa matukio yasiyoelezeka ya kihistoria yaliyofungwa kwenye chumba kimoja cha udongo, na madhara yake pale mtoto mdogo mgeni anapoamua kukifungua...</p>
+                    </div>
+                    <a href="https://wa.me/255699223926?text=Habari%20Dreamax%20Studios,%20nahitaji%20kununua%20hadithi%20ya%20*Siri%20ya%20Nyumba%20ya%20Udongo*" target="_blank" class="w-full text-center bg-amber-500 hover:bg-amber-600 text-neutral-950 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> Nunua kwa WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800 bg-neutral-950 py-10 text-center text-xs text-zinc-500">
+        <p class="mb-2">&copy; 2026 Dreamax Studios. Haki zote zimehifadhiwa.</p>
+        <p>Dar es Salaam, Tanzania</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>

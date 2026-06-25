@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma: What If...| Dreamax Studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Font ya herufi za hadithi yenyewe ili iwe rahisi kusoma kwa muda mrefu */
+        .story-text { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-neutral-950 text-zinc-100 min-h-screen flex flex-col justify-between">
+
+    <!-- NAVIGATION BAR (Sawa na kurasa zingine zote kwa ulinganifu) -->
+    <nav class="border-b border-zinc-800 bg-neutral-950/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-full border border-zinc-700 bg-zinc-800 flex items-center justify-center overflow-hidden">
+                        <img src="img/Dreamax logo.png" class="h-full w-full object-cover">
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-wide">Dreamax <span class="text-amber-500">Studios</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-zinc-400 hover:text-white transition pb-1">Nyumbani</a>
+                    <a href="free.html" class="text-amber-500 border-b-2 border-amber-500 pb-1">Hadithi za Bure</a>
+                    <a href="premium.html" class="text-zinc-400 hover:text-white transition pb-1">Hadithi za Kulipia</a>
+                    <a href="about.html" class="text-zinc-400 hover:text-white transition pb-1">Kuhusu Sisi</a>
+                    <a href="contact.html" class="text-zinc-400 hover:text-white transition pb-1">Wasiliana Nasi</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://wa.me/255700000000" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold px-5 py-2 rounded-full text-xs transition uppercase tracking-wider flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-400 hover:text-white focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-zinc-800 bg-neutral-950">
+            <a href="index.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Nyumbani</a>
+            <a href="free.html" class="block text-amber-500 py-2 font-medium">Hadithi za Bure</a>
+            <a href="premium.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Hadithi za Kulipia</a>
+            <a href="about.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Kuhusu Sisi</a>
+            <a href="contact.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Wasiliana Nasi</a>
+            <a href="https://wa.me/255700000000" target="_blank" class="block text-center bg-amber-500 text-neutral-950 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider">WhatsApp Chat</a>
+        </div>
+    </nav>
+
+    <!-- HEADER YA CHINI (Back Button na Zana za Kukuza Maandishi) -->
+    <div class="border-b border-zinc-900 bg-zinc-900/10 py-4">
+        <div class="max-w-3xl mx-auto px-4 flex items-center justify-between text-xs sm:text-sm">
+            <a href="free.html" class="text-zinc-400 hover:text-white transition flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> Rudi kwenye Katalogi
+            </a>
+            <div class="flex items-center gap-3">
+                <span class="text-zinc-500">Ukubwa wa herufi:</span>
+                <button onclick="changeFontSize('small')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A-</button>
+                <button onclick="changeFontSize('large')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN READER WRAPPER -->
+    <main class="max-w-3xl mx-auto px-4 py-12 flex-grow">
+        <!-- Taarifa za Juu za Hadithi -->
+        <header class="mb-12 border-b border-zinc-900 pb-8">
+            <span class="text-amber-500 text-xs font-bold tracking-wider uppercase">Sura ya Kwanza: Mwanzo wa kila kitu</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-4">What If I Am A Dad?</h1>
+            <div class="flex flex-wrap items-center gap-4 text-xs text-zinc-500">
+                <span>Mwandishi: Dreamax Studios</span>
+                <span>•</span>
+                <span>Muda wa Kusoma: Dakika 15</span>
+            </div>
+        </header>
+
+        <!-- SEHEMU YA HADITHI (Ukurasa wa Kusomea) -->
+        <article id="story-container" class="story-text text-zinc-300 leading-relaxed text-base sm:text-lg space-y-6">
+            <!-- Weka aya zako zote za hadithi hapa -->
+            <p>
+                Giza lilitanda chumbani, likipasuliwa tu na mwanga hafifu wa taa ya njano iliyokuwa kwenye kona ya ukuta. Nilikuwa nimesimama hapo, kimya kabisa, nikiogopa hata kuvuta pumzi kwa nguvu isije ikaharibu utulivu ule ulikuwepo. Macho yangu yalikuwa yametumbukia kwenye kitanda kidogo kilichokua mbele yangu. Hapo, akiwa amejikunja kwa amani na utulivu mkubwa, alilala Aliyah.
+            </p>
+            <p>
+                Kifua chake kidogo kilikuwa kikipanda na kushuka kwa mdundo wa taratibu sana. Kiganja chake kimoja, kilichokuwa kidogo kuliko dole gumba langu, kilikuwa kimekunjwa kwa nguvu. Katika ukimya ule mzito, swali lile lililokuwa likinisumbua kwa miezi kadhaa sasa, au labda niseme miaka, lilirejea tena kwa nguvu ya kimbunga akilini mwangu. "What if I am a dad?" 
+                
+            </p>
+            <p>
+                Sio tu baba wa kwenye cheti cha kuzaliwa, bali baba wa kweli. Ambaye ni kiongozi na mlinzi. Msingi mkuu wa maisha ya kiumbe hiki kisicho na hatia. ​Niliitazama mikono yangu iliokuwa inatetemeka kwa mbali. Mikono hii iliyozoea kushika kalamu, kubuni michoro, na kuunda stori zenye maelfu ya maneno, sasa inabeba uhalisia mzito zaidi kuwahi kutokea. Hakuna hati ya kujifunzia hapa. Huu ni uhalisia wa maisha ya Yassir Hassan Mwita. Hapa, hakuna "take two", kwa maana... Hii sio filamu wala maigizo.
+
+            </p>
+            <p>
+                Nilijikuta nikitabasamu kwa mchanganyiko wa hofu na mapenzi mazito ambayo sijawahi kuyapata maishani mwangu, kwa maana, jambo la kumpata mtoto wa kike lilikua ni moja miongoni mwa ndoto zangu nilizokua nazo. Ili niweze kumlea Aliyah kwa usahihi, nilihitaji kuelewa mimi ni nani hasa. Na ili nijue mimi ni nani, ilibidi nirudi nyuma. Mbali sana. Ilibidi niitazame njia niliyopita, mpaka kufika hapa nilipokua.
+
+            </p>
+            <p>
+                Sauti ya mvua iliyokuwa ikipiga kwenye paa la bati la nyumba yetu ya wakati huo, ilianza kurindima masikioni mwangu, ikifuta kabisa ukimya wa chumba kile. Nilifumba macho taratibu na kuvuta hisia kali, na ghafla, sikuwa tena kwenye chumba kile chenye amani. Fikra zangu zikarudi huko nyuma sana!
+</p>
+<p>
+    Ilikuwa ni mwaka 2008. Harufu ya ardhi iliyolowa maji baada ya kiangazi kirefu ndiyo kitu cha kwanza ninachokumbuka. Nilikuwa na umri wa miaka saba au nane hivi, nikiwa nimekaa kwenye kizingiti cha mlango uliokuwa umechapwa na rangi iliyochubuka. ​Miguu yangu ilikuwa imetapakaa matope, lakini macho yangu yalikuwa yamemkazia mama ambaye alikuwa akifanya shughuli za usafi wa ndani na nje ya nyumba. Uso wake ulikuwa umejaa uchovu, lakini mikono yake ilifanya kazi bila kupumzika. Siku hiyo sikuelewa, lakini ule ndio ulikuwa msingi wangu wa kwanza wa maana ya kupambania familia.
+    </p>
+    <p>
+        Wakati huo, sikuwa nawaza kuhusu ubaba wala maisha ya mbele. Nilikuwa tu mtoto mwenye ndoto kubwa zilizokuwa zikizunguka ndani ya kichwa changu, mtoto ambaye hakujua kabisa ukubwa wa dunia anayoenda kukabiliana nayo, mpaka pale dunia yenyewe iliponifuata na kunikaba koo ndani ya kuta za sebuleni kwetu.
+        </p>
+        <p>
+            Nakumbuka harufu ya viazi vitamu vilivyochemshwa. Harufu ambayo mpaka leo ikinipitia puani, inafufua maumivu yaliyojificha. Ilikuwa ni asubuhi, na baba alikuwa ameingia ndani na mzigo wa viazi hivyo. Hicho ndicho kilikuwa kifungua kinywa chetu. Na kama haitoshi, huo ndio ungekuwa mlo wetu wa mchana pia.
+​Sauti ya mama haikuanza kwa ukali wala fujo, ilianza tu kwa mtetemo wa mtu aliyechoka kubeba mzigo wa dharau na maumivu ya muda mrefu.
+</p>
+<p>​
+"Hivi ndivyo watoto wako watakavyokula tena leo?" aliuliza mama, maneno yake yakikata hewa nzito iliyotawala chumba kile. ​Baba hakujibu kwa namna iliyomtuliza au ambayo ingeweza kupunguza lile jazba alilokua nalo mama muda ule. Na hapo ndipo ukimya ulipopasuka. Hata kwa akili yangu ya kitoto, nilijua chanzo cha maumivu ya mama. Tulijua kwamba kule kwingine, kwenye nyumba ya mke wa pili, meza ilikuwa imejaa neema na huduma nzuri, wakati sisi tukisukuma siku kwa matumaini na viazi vitamu. Mama alikuwa akimwaga chozi la damu kwa ndani, akiongea kwa uchungu uliochoma hadi kwenye mifupa.
+</p>
+<p>
+    Kwa sekunde moja, kila kitu kilionekana kusimama. Kisha, kwa hasira iliyolipuka kama volkano, mama alimsogelea baba na kumkunja shati lake kwa mikono miwili. Misuli ya uso wake ilikuwa imekazana, macho yake yakimwaga machozi ya hasira na kusalitiwa.
+​Zile vurugu zilizofuata, sauti za msuguano, baba akijaribu kujinasua, na maneno makali yaliyorushwa kama mishale, zilitufanya sisi watoto tusinyae kwa hofu kubwa. Tulijikusanya kwenye kona moja ya chumba, mimi na wenzangu, tukianza kulia kwa sauti bila kizuizi. Kila neno la mama la uchungu lilikuwa kama kisu cha moto kinachotuchoma.
+</p>
+<p>
+    Nilimwangalia baba yangu, mwanaume ambaye alipaswa kuwa nguzo na shujaa wetu, akiwa katikati ya kimbunga hiki cha hisia. Je, vipi kama ningekua ni mimi? 
+</p>
+
+<p>
+    Katika kona ile, nikiwa nalia huku nikifuta makamasi kwa nyuma ya kiganja changu, ndipo mbegu ya kwanza ya hofu ilipopandwa ndani yangu. Hofu ya kushindwa. Hofu ya kuja kuwa mwanaume anayeleta machozi badala ya tabasamu ndani ya nyumba yake. Sikua naweza kufikiria hayo kwa wakati huo, lakini sasa angalau naelewa, nini maana ya kuitwa mzazi, nini maana ya kuitwa baba.
+    
+</p>
+<p>
+    Unajua ​utotoni bwana, kuna hii tabia ya kuficha ukweli mchungu chini ya pazia la kutokuwa na hatia. Baada ya kimbunga kile cha sebuleni, na siku nyingine nyingi zilizofuata, maisha yaliendelea. Kwa upande wangu, uhusiano wangu na baba ulibaki kuwa wa 'kawaida' tu. Sio kwa sababu sikuwa naona makosa yake, bali kwa sababu, katika umri ule, moyo wangu ulikuwa mdogo sana kuweza kubeba chuki dhidi ya mzazi wangu. Sikuwa na hata uwezo wa kumchukia mtu yeyote, sembuse yeye?.
+</p>
+<p>
+    Hata hivyo, maumivu yalikuwa palepale, yakichimba kimyakimya kama maji yanayomomonyoa ardhi. Kila nilipomwangalia mama akihangaika, akijikunja na kujitoa mhanga kutupambania ili angalau tupate kile kinachostahili kuitwa mlo au heshima ya maisha, kifua changu kilikuwa kinabana. Mama hakuficha madhaifu ya baba. Alikuwa akiyaongea waziwazi kwa sauti iliyojaa uchungu. Na kiukweli, maneno yake hayakuwa uongo. Hayo madhaifu ya baba ndiyo yaliyotufunga kwenye minyororo ya yale maisha ambayo mama aliyachukia kwa dhati. Kila neno la mama lilikuwa kama kioo kilichonionyesha ukweli wa jinsi mwanaume huyu alivyoshindwa kusimama kama kiongozi wa familia yetu kwa wakati huo.
+    </p>
+    <p>
+        Lakini, dunia ya mtoto ni tata sana. Pamoja na kasoro hizo zote, baba alikuwa na upande wake wa pili ulionichanganya kabisa akili na ubongo wangu. Alinipendelea sana mimi kuliko watoto wengine. Sijui kwavile ndo nilikua mkubwa na kuelewa mambo kuliko wengine, hilo sijui. Maana Katika nyakati ambazo hali ilikuwa shwari, basi baba angekuja na kunichukua.
+​"Hebu twende huku," angesema, na mimi sasa, kwa wepesi wa kitoto, ningemfuata bila kujiuliza mara mbili.
+​Tungeenda sehemu mbalimbali, tukitembea na kutazama dunia nje ya kuta zetu zenye migogoro. Katika safari zile, aliponishika mkono au kunionyesha vitu vipya barabarani, alionekana kama baba tofauti na baba wengine wote duniani, sio yule aliyesababisha mama alie. Bali alikuwa rafiki. Alinifanya nijihisi mimi ni wa kipekee.
+</p>
+<p>
+    Hapo ndipo mgongano wangu mkuu wa kwanza wa kisaikolojia ulipoanza. Nilikuwa nikimpenda yule mwanaume aliyenishika mkono mitaani na kunitembeza, lakini nilikuwa nikiugulia kwa ndani kumuona mwanaume huyo huyo akiwa chanzo cha machozi na mateso ya mwanamke aliyenileta duniani. Inashangaza na kuumiza kwa wakati mmoja. Nilijifunza mapema sana somo ambalo watu wazima wengi bado hawajalielewa. Mtu anaweza kuwa mzuri sana kwako wewe binafsi, lakini akawa anaiangamiza familia yako kwa wakati huo huo.
+    </p>
+    <p>
+        Mitaani sasa, alikuwa baba anayenijali. Ila ndani ya nyumba, alikuwa mwiba uliokuwa ukimtoboatoboa mama kila uchao. Mgawanyiko huu wa tabia yake uliacha swali kubwa lililolala ndani yangu kwa miaka mingi, likisubiri mimi mwenyewe kufikia hatua ya kuwa baba ili nilijibu. Kati ya hizi sura mbili za baba yangu, mimi Yassir, nitachagua kurithi ipi?
+</p>
+<p>Inaendelea...
+</p>
+            <!-- Mwisho wa aya za hadithi -->
+        </article>
+
+        <!-- FOOTER YA HADITHI (Navigation ya sura inayofuata) -->
+        <div class="mt-16 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs text-zinc-500">Umesoma Sura ya 1</span>
+            <div class="flex gap-4">
+                <!-- Kama sura ya pili ni ya kulipia, inaweza kumpeleka premium.html au WhatsApp -->
+                <a href="premium.html" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 text-xs font-bold px-6 py-3 rounded-xl transition uppercase tracking-wider">
+                    Soma Sura ya 2 (Premium) &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- MAIN FOOTER -->
+    <footer class="border-t border-zinc-800 bg-neutral-950 py-10 text-center text-xs text-zinc-500">
+        <p class="mb-2">&copy; 2026 Dreamax Studios. Haki zote zimehifadhiwa.</p>
+        <p>Dar es Salaam, Tanzania</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Script ya Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Script ya kubadilisha ukubwa wa herufi (Font Size Tool)
+        function changeFontSize(action) {
+            const container = document.getElementById('story-container');
+            const currentSize = window.getComputedStyle(container).fontSize;
+            let newSize = parseFloat(currentSize);
+
+            if (action === 'large' && newSize < 24) {
+                newSize += 2;
+            } else if (action === 'small' && newSize > 14) {
+                newSize -= 2;
+            }
+            container.style.fontSize = newSize + 'px';
+        }
+    </script>
+</body>
+</html>

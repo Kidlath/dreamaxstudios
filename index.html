@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamax Studios | Nyumbani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-neutral-950 text-zinc-100 min-h-screen flex flex-col justify-between">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="border-b border-zinc-800 bg-neutral-950/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo na Jina -->
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-full border border-zinc-700 bg-zinc-800 flex items-center justify-center overflow-hidden">
+                        <!-- Weka picha ya logo hapa: <img src="logo.png" class="h-full w-full object-cover"> -->
+                        <img src="img/Dreamax logo.png" class="h-full w-full object-cover">
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-wide">
+                        Dreamax <span class="text-amber-500">Studios</span>
+                    </span>
+                </div>
+                <!-- Desktop Links -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-amber-500 border-b-2 border-amber-500 pb-1">Nyumbani</a>
+                    <a href="free.html" class="text-zinc-400 hover:text-white transition pb-1">Hadithi za Bure</a>
+                    <a href="premium.html" class="text-zinc-400 hover:text-white transition pb-1">Hadithi za Kulipia</a>
+                    <a href="about.html" class="text-zinc-400 hover:text-white transition pb-1">Kuhusu Sisi</a>
+                    <a href="contact.html" class="text-zinc-400 hover:text-white transition pb-1">Wasiliana Nasi</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://wa.me/255699223926" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold px-5 py-2 rounded-full text-xs transition uppercase tracking-wider flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-400 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-zinc-800 bg-neutral-950">
+            <a href="index.html" class="block text-amber-500 py-2 font-medium">Nyumbani</a>
+            <a href="free.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Hadithi za Bure</a>
+            <a href="premium.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Hadithi za Kulipia</a>
+            <a href="about.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Kuhusu Sisi</a>
+            <a href="contact.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Wasiliana Nasi</a>
+            <a href="https://wa.me/255699223926" target="_blank" class="block text-center bg-amber-500 text-neutral-950 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider">WhatsApp Chat</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative py-24 text-center bg-gradient-to-b from-zinc-900 to-neutral-950 border-b border-zinc-900">
+        <div class="max-w-4xl mx-auto px-4">
+            <span class="px-3 py-1.5 text-xs font-semibold text-amber-500 bg-amber-500/10 border border-amber-500/20 rounded-full uppercase tracking-wider">Maktaba Rasmi</span>
+            <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
+                Soma Hadithi na <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Simulizi za Kusisimua</span>
+            </h1>
+            <p class="mt-6 text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                Karibu Dreamax Studios. Tunatoa simulizi za kusisimua zilizotayarishwa kwa ustadi mkubwa ili kukupa burudani ya kipekee.
+            </p>
+        </div>
+    </header>
+
+    <!-- TRENDING SECTION -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-grow">
+        <div class="mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Zinazovuma Wiki Hii</h2>
+            <p class="text-zinc-400 text-sm mt-1">Zilizosomwa zaidi wiki hii ndani ya Dreamax Studios</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Trending Story 1 (Free) -->
+            <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 hover:border-zinc-700 transition duration-300">
+                <!-- Sehemu ya Cover (Image) -->
+                <div class="w-full sm:w-44 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-zinc-800 bg-zinc-950 shrink-0 relative group">
+                    <!-- Badilisha 'kivuli-cover.jpg' na jina la picha yako ya jalada -->
+                    <img src="img/dad 1.jpg" onerror="this.src='https://images.unsplash.com/photo-5447162786-253f1472f647?q=80&w=400'" alt="Kivuli cha Ndoto Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-3 left-3 bg-zinc-950/80 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase">Bure</span>
+                </div>
+                <!-- Maelezo na Kitufe -->
+                <div class="flex flex-col justify-between flex-grow">
+                    <div>
+                        <span class="text-[11px] font-bold text-amber-500 tracking-wider uppercase">Maisha na Mkanganyiko</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">What If I Am A Dad?</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed line-clamp-4">Anapata mkanganyiko mkubwa zaidi wa kihisia mara baada ya kupata mtoto wa kike, anayakumbuka maisha aliyoishi yeye na vipi kama mtoto huyo yatamrudia...</p>
+                    </div>
+                    <a href="free.html" class="mt-6 w-full text-center bg-zinc-800 hover:bg-zinc-700 text-white py-3 rounded-xl font-semibold transition text-xs tracking-wider uppercase">Soma Sasa</a>
+                </div>
+            </div>
+
+            <!-- Trending Story 2 (Premium) -->
+            <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 hover:border-amber-500/20 transition duration-300">
+                <!-- Sehemu ya Cover (Image) -->
+                <div class="w-full sm:w-44 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl border border-zinc-800 bg-zinc-950 shrink-0 relative group">
+                    <!-- Badilisha 'machozi-cover.jpg' na jina la picha yako ya jalada -->
+                    <img src="img/madam president.jpg" onerror="this.src='https://images.unsplash.com/photo-518372712866-51101890197b?q=80&w=400'" alt="Machozi ya Ushindi Cover" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-3 left-3 bg-zinc-950/80 text-amber-500 border border-amber-500/20 px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase">Premium</span>
+                </div>
+                <!-- Maelezo na Kitufe -->
+                <div class="flex flex-col justify-between flex-grow">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <span class="text-[11px] font-bold text-amber-500 tracking-wider uppercase">Siasa na Mapambano</span>
+                            <span class="text-white text-xs font-bold bg-zinc-800 px-2 py-0.5 rounded">TZS 3,000</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Madam President (Muheshimiwa Rais)</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed line-clamp-4">Hadithi ya kusisimua ya siasa, mapambano, usaliti na ujasiri wa mwanamke anayelazimika kulinda raia wa nchi yake huku wananchi hao hao wakitaka kumpindua...</p>
+                    </div>
+                    <a href="premium.html" class="mt-6 w-full text-center bg-amber-500 hover:bg-amber-600 text-neutral-950 py-3 rounded-xl font-bold transition text-xs tracking-wider uppercase">Mchakato wa Kununua</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800 bg-neutral-950 py-10 text-center text-xs text-zinc-500">
+        <p class="mb-2">&copy; 2026 Dreamax Studios. Haki zote zimehifadhiwa.</p>
+        <p>Dar es Salaam, Tanzania</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>
