@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma: Suzy wa mbezi...| Dreamax Studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Font ya herufi za hadithi yenyewe ili iwe rahisi kusoma kwa muda mrefu */
+        .story-text { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-neutral-950 text-zinc-100 min-h-screen flex flex-col justify-between">
+
+    <!-- NAVIGATION BAR (Sawa na kurasa zingine zote kwa ulinganifu) -->
+    <nav class="border-b border-zinc-800 bg-neutral-950/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-full border border-zinc-700 bg-zinc-800 flex items-center justify-center overflow-hidden">
+                        <img src="img/Dreamax logo.png" class="h-full w-full object-cover">
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-wide">Dreamax <span class="text-amber-500">Studios</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-zinc-400 hover:text-white transition pb-1">Nyumbani</a>
+                    <a href="free.html" class="text-amber-500 border-b-2 border-amber-500 pb-1">Hadithi za Bure</a>
+                    <a href="premium.html" class="text-zinc-400 hover:text-white transition pb-1">Hadithi za Kulipia</a>
+                    <a href="about.html" class="text-zinc-400 hover:text-white transition pb-1">Kuhusu Sisi</a>
+                    <a href="contact.html" class="text-zinc-400 hover:text-white transition pb-1">Wasiliana Nasi</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://wa.me/255700000000" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold px-5 py-2 rounded-full text-xs transition uppercase tracking-wider flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-400 hover:text-white focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-zinc-800 bg-neutral-950">
+            <a href="index.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Nyumbani</a>
+            <a href="free.html" class="block text-amber-500 py-2 font-medium">Hadithi za Bure</a>
+            <a href="premium.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Hadithi za Kulipia</a>
+            <a href="about.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Kuhusu Sisi</a>
+            <a href="contact.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Wasiliana Nasi</a>
+            <a href="https://wa.me/255700000000" target="_blank" class="block text-center bg-amber-500 text-neutral-950 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider">WhatsApp Chat</a>
+        </div>
+    </nav>
+
+    <!-- HEADER YA CHINI (Back Button na Zana za Kukuza Maandishi) -->
+    <div class="border-b border-zinc-900 bg-zinc-900/10 py-4">
+        <div class="max-w-3xl mx-auto px-4 flex items-center justify-between text-xs sm:text-sm">
+            <a href="free.html" class="text-zinc-400 hover:text-white transition flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> Rudi kwenye Katalogi
+            </a>
+            <div class="flex items-center gap-3">
+                <span class="text-zinc-500">Ukubwa wa herufi:</span>
+                <button onclick="changeFontSize('small')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A-</button>
+                <button onclick="changeFontSize('large')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN READER WRAPPER -->
+    <main class="max-w-3xl mx-auto px-4 py-12 flex-grow">
+        <!-- Taarifa za Juu za Hadithi -->
+        <header class="mb-12 border-b border-zinc-900 pb-8">
+            <span class="text-amber-500 text-xs font-bold tracking-wider uppercase">Sehemu ya Pili: Heka Heka zangu</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-4">Suzy wa Mbezi</h1>
+            <div class="flex flex-wrap items-center gap-4 text-xs text-zinc-500">
+                <span>Mwandishi: Dreamax Studios</span>
+                <span>•</span>
+                <span>Muda wa Kusoma: Dakika 15</span>
+            </div>
+        </header>
+
+        <!-- SEHEMU YA HADITHI (Ukurasa wa Kusomea) -->
+        <article id="story-container" class="story-text text-zinc-300 leading-relaxed text-base sm:text-lg space-y-6">
+            <!-- Weka aya zako zote za hadithi hapa -->
+            <p>
+               Kama unaishi uswahilini, kuna ukweli mmoja lazima uukubali... mdaiwa hakimbii madeni, bali hujipanga. Na Suzy je? <br>
+Yeye sio wa kukimbia bana. Baada ya lile tukio la landlord wake, Suzy alirudi chumbani kwake, akakaa kitandani, mikono kichwani, macho yakitazama juu ya dari inayovuja akitafakari kwa kina.
+
+            </p>
+            <p>
+                “Maisha haya jamani... yanataka mtu awe mjanja kweli kweli kuliko maisha yenyewe. Hapa inabidi nifanye kitu nisikae kizembe.” <br>
+Hakukaa muda mrefu. Suzy si mtu wa kukaa chini muda mrefu kabisa. Akasimama ghafla, akajifunga kanga vizuri, akachukua simu yake ile yenye skrini imepasuka kona ya juu.
+Kisha akamuita mtu mmoja muhimu sana kwenye maisha yake.
+                
+            </p>
+            <p>
+                "We Mama Pinda."
+Mama Pinda ni rafiki yake wa karibu sana, mdomo wake unazidi hata wa Suzy, yaani... Yeye ndo master wa hizi kazi. Na akianza kusimulia umbea sass, yani watu wanakusanyika bila kualikwa utafikiri kuna shuhuli ya harusi.
+
+            </p>
+            <p>
+                “Mama Pinda shoga angu, nakuja kwako sasa hivi. Kuna mambo yananiumiza kichwa hapa ata sielewi udugu wangu.” <br>
+“we nae kumekucha tena usochoka mabalaa. Haya njoo haraka. Kwanza Leo nina vituko vipya kabisa. Yani nina umbea umenikaa hapa ata nikifa saivi ntafufuka nije kukuambia shoga angu”
+
+            </p>
+            <p>
+                Dakika tano baadaye, Suzy yupo stoo ya Mama Pinda. Viti vya plastiki, redio inacheza taarab, na chai ya rangi imekaa kwenye meza. Mama Pinda anamwangalia Suzy juu chini, anampandisha na kumshusha. <br>
+“haya, we leo mbona uso una rangi ya njano kama hela? Au mwenzetu umepakwa gold!”
+</p>
+<p>
+    Suzy akamjibu:<br>
+"Ah wapi! Mwenzako nina shida zimeniandama mpaka kwenye nywele! Yaani nakwambia huyo baba mwenyenyumba kaniandama utafikiri waziri wa fedha! Kila mda kuchungulia mlangoni kwangu kama nipo au nimehama. Eti anataka kodi yake!" 
+    </p>
+    <p>
+        Mama pinda akasema:
+"Mhh.. Yule nae mtu mzima ovyo na kitambi chake kama beseni la uchafu." 
+
+Basi Suzy aliendelea kumwambia kila kitu kuhusu kodi, malipo ya maji, kazi hakuna ya maana, pesa zinaingia kama upepo zinatoka kama radi. Yaani ni mvurugano tu mpaka suzy haelewi. 
+        </p>
+        <p>
+            Mama Pinda akacheka...
+“heheheee...yani leo umepatikana shoga angu. shida yako na wewe, moyo wako mkubwa mno. Yani Unachekesha watu wote halafu ukirudi nyumbani unalia na hali yako.”
+
+</p>
+
+<p>Maneno yale yakamgusa kidogo Suzy.
+Lakini hakulia wala kujihisi vibaya.
+Badala yake, akapiga meza kidogo kwa mkono wake ishara ya kumnyamazisha. <br>
+“Hebu tulia na wewe mtu mzima kisheti. Sasa leo sitochekesha mtu bure upo nyonyo. Leo natafuta hela. Nataka sasampa sielewi kabisaa”. Hapo ndipo wazo la kipuuzi na hatari likazaliwa.
+</p>
+
+<p>Mama Pinda akapendekeza. <br>
+“Basi udugu wangu, Kuna harusi Mbezi Beach kesho. Wanatafuta mtu wa kupokea wageni na kusaidia jikoni. Malipo papo kwa papo. Yani shoga hiyo harusi ni ya kishua navyokwambia.” <br>
+Macho ya Suzy yakang’aa gafla, mithili ya mtu aliyepata nuru. <br>
+“hapo ndo napataka sasa. Kesho nitavaa vile viatu vyangu vizuri, nitakwenda huko.”
+</p>
+
+<p>Lakini kama ilivyo kawaida ya Suzy... 
+kila jambo analoingia, lazima liwe na vurugu kidogo. Yani hapajawahi kuisha kwa amani kabisa. Ila huyu mwanamke mhhh! Amenishinda kwa kweli. <br>
+
+Kwa sababu ukweli ni kwamba:<br>
+👉 Kwenye harusi ile kuna mtu anayemjua <br>
+👉 na mtu huyo ana historia naye <br>
+👉 na historia hiyo ya huyo mtu si ya kufurahisha sana. <br>
+
+Yani hapa suzy lazima mdomo wake uwake moto kwa anavyojulikana. 
+</p>
+
+<p>Suzy akasema...
+"Haya shoga angu, tuachane na hayo nisije kusahau. Ulinambia una umbea umekukaa hapa kwa koo, sasa nautaka sasa hivi usinipoze injini" <br>
+Hapa sasa ndo utamjua vizuri suzy na mama pinda ni watu wa aina gani. 
+Mama pinda akasema:
+"Shoga angu, si pale mtaa wa pili kuna shefa mmoja kahamia? Kuna kigorofa uchwara kilikua kinajengwa pale, sasa kumbe chake. Huyo jamaa ni handsome navyokwambia halafu sasa, sio mtoto wa mjini yani hana mambo mengi kabisa" 
+</p>
+
+<p> Suzy alimuangalia mama pinda huku akimpandisha na kumshusha kwa dharau, kisha akamuuliza kwa nyodo. 
+"kwahiyo?" <br>
+
+Mama pinda akaongea kwa kujitetea...
+"hee udugu wangu, mbona tena ushabadilika jamani" <br>
+Suzy akaanza tena, <br>
+"yani mimi siku zote hua nasema we ni mtu mzima hovyo! Hebu muangalie kwanza sura ilivyomshuka kama mashavu ya bibi kizee. Sasa unanambia mimi habari za huyo bwana ili nimfanye nini kwamfano? nisikize we kinyago cha mpapure usiye na haya wala usiyejua vibaya. kama huna story tuliza akili mwanamke na ujifunze kukuna upo! ndo mana huolewi kwa umbea nyoo! Kila mwanaume anakuacha utafikiri una laana za ukoo." 
+</p>
+
+<p> Mama pinda hapa alisarenda, akawa mdogo na kunywea kama kdonge cha piritoni. <br>
+"Eeh! Yamekua hayo shoga angu? Basi samahani na wewe udugu. Mimi na wewe tena.." 
+Suzy kaendelea... <br>
+"nyoo...!Eti nyoko nyoko nyoko... Nipishege mie na ubaradhuli wako uo." <br>
+
+Hii ndo inaitwa dakika mbili mbele, dakika mbili nyuma, ila suzy! </p>
+
+<p> Unataka kujua nini kitaendelea huko kwenye sherehe? Haya kaa karibu twende episode ya tatu ya hadithi yetu bora kabisa ya Suzy wa mbezi kutoka hapa Dreamax Studios. Tabasamu basi kidogo na wewe jaman aaah...
+</p>
+
+            <!-- Mwisho wa aya za hadithi -->
+        </article>
+
+        <!-- FOOTER YA HADITHI (Navigation ya sura inayofuata) -->
+        <div class="mt-16 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs text-zinc-500">Umesoma Sehemu ya 2</span>
+            <div class="flex gap-4">
+                <!-- Kama sura ya pili ni ya kulipia, inaweza kumpeleka premium.html au WhatsApp -->
+                <a href="free.html" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 text-xs font-bold px-6 py-3 rounded-xl transition uppercase tracking-wider">
+                    Soma Sehemu ya 3 (Bure) &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- MAIN FOOTER -->
+    <footer class="border-t border-zinc-800 bg-neutral-950 py-10 text-center text-xs text-zinc-500">
+        <p class="mb-2">&copy; 2026 Dreamax Studios. Haki zote zimehifadhiwa.</p>
+        <p>Dar es Salaam, Tanzania</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Script ya Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Script ya kubadilisha ukubwa wa herufi (Font Size Tool)
+        function changeFontSize(action) {
+            const container = document.getElementById('story-container');
+            const currentSize = window.getComputedStyle(container).fontSize;
+            let newSize = parseFloat(currentSize);
+
+            if (action === 'large' && newSize < 24) {
+                newSize += 2;
+            } else if (action === 'small' && newSize > 14) {
+                newSize -= 2;
+            }
+            container.style.fontSize = newSize + 'px';
+        }
+    </script>
+</body>
+</html>
