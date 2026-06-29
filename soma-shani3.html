@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma: Shani...| Dreamax Studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Font ya herufi za hadithi yenyewe ili iwe rahisi kusoma kwa muda mrefu */
+        .story-text { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-neutral-950 text-zinc-100 min-h-screen flex flex-col justify-between">
+
+    <!-- NAVIGATION BAR (Sawa na kurasa zingine zote kwa ulinganifu) -->
+    <nav class="border-b border-zinc-800 bg-neutral-950/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-full border border-zinc-700 bg-zinc-800 flex items-center justify-center overflow-hidden">
+                        <img src="img/Dreamax logo.png" class="h-full w-full object-cover">
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-wide">Dreamax <span class="text-amber-500">Studios</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-zinc-400 hover:text-white transition pb-1">Nyumbani</a>
+                    <a href="free.html" class="text-amber-500 border-b-2 border-amber-500 pb-1">Hadithi za Bure</a>
+                    <a href="premium.html" class="text-zinc-400 hover:text-white transition pb-1">Hadithi za Kulipia</a>
+                    <a href="about.html" class="text-zinc-400 hover:text-white transition pb-1">Kuhusu Sisi</a>
+                    <a href="contact.html" class="text-zinc-400 hover:text-white transition pb-1">Wasiliana Nasi</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://wa.me/255700000000" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold px-5 py-2 rounded-full text-xs transition uppercase tracking-wider flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-400 hover:text-white focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-zinc-800 bg-neutral-950">
+            <a href="index.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Nyumbani</a>
+            <a href="free.html" class="block text-amber-500 py-2 font-medium">Hadithi za Bure</a>
+            <a href="premium.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Hadithi za Kulipia</a>
+            <a href="about.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Kuhusu Sisi</a>
+            <a href="contact.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Wasiliana Nasi</a>
+            <a href="https://wa.me/255699223926" target="_blank" class="block text-center bg-amber-500 text-neutral-950 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider">WhatsApp Chat</a>
+        </div>
+    </nav>
+
+    <!-- HEADER YA CHINI (Back Button na Zana za Kukuza Maandishi) -->
+    <div class="border-b border-zinc-900 bg-zinc-900/10 py-4">
+        <div class="max-w-3xl mx-auto px-4 flex items-center justify-between text-xs sm:text-sm">
+            <a href="free.html" class="text-zinc-400 hover:text-white transition flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> Rudi kwenye Katalogi
+            </a>
+            <div class="flex items-center gap-3">
+                <span class="text-zinc-500">Ukubwa wa herufi:</span>
+                <button onclick="changeFontSize('small')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A-</button>
+                <button onclick="changeFontSize('large')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN READER WRAPPER -->
+    <main class="max-w-3xl mx-auto px-4 py-12 flex-grow">
+        <!-- Taarifa za Juu za Hadithi -->
+        <header class="mb-12 border-b border-zinc-900 pb-8">
+            <span class="text-amber-500 text-xs font-bold tracking-wider uppercase">Sehemu ya Tatu: Siri ya kina kirefu
+             </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-4">Shani</h1>
+            <div class="flex flex-wrap items-center gap-4 text-xs text-zinc-500">
+                <span>Mwandishi: Dreamax Studios</span>
+                <span>•</span>
+                <span>Muda wa Kusoma: Dakika 15</span>
+            </div>
+        </header>
+
+        <!-- SEHEMU YA HADITHI (Ukurasa wa Kusomea) -->
+        <article id="story-container" class="story-text text-zinc-300 leading-relaxed text-base sm:text-lg space-y-6">
+            <!-- Weka aya zako zote za hadithi hapa -->
+            <p>
+               Sauti nzito ya mtangazaji wa habari ilipasua ukimya, ikisindikizwa na maandishi mekundu yaliyokuwa yakipita kwa kasi chini ya kioo cha runinga: <br> <br>
+
+<i>"Katika hali inayoelezwa kama muujiza, mtoto mchanga ameokotwa akiwa hai katika kijiji cha wavuvi kilichopo kisiwa cha kaskazini. Mtoto huyo alikutwa akielea juu ya ubao wa boti chakavu ambayo haijatambulika mara moja. Tukio hili limeibua sintofahamu nzito, ikizingatiwa zimepita siku mbili tu tangu ajali mbaya ya majini iliyohusisha meli ya kifahari ya mfanyabiashara mashuhuri, Alexander Edward. Duru za kuaminika zinadokeza kuwa, huenda mtoto huyu ni binti wa bilionea huyo aliyekuwa akisakwa usiku na mchana..."</i>
+
+            </p>
+            <p>
+                Wakati dunia ikipokea taarifa hizo kwa mshituko, hospitalini hali ilikuwa ni ya taharuki. Mtoto huyo mchanga alikuwa ameshafikishwa na kuwekwa chini ya uangalizi maalum wa mashine za kusaidia kupumua. ​Alexander aliwasili kwa kishindo. Hatua zake zilikuwa za haraka, nzito, na zenye pupa kana kwamba alikuwa anafukuzia sekunde zilizopotea. Akiwa ameambatana na msururu wa walinzi, sura yake ilijaa hofu na jasho jembamba. <br> <br>
+​"Daktari! Vipi hali ya mtoto? Tafadhali, niambie!" Alexander alifoka, pumzi zikimwenda mbio. Daktari, kwa sauti ya utulivu iliyobeba uzito wa taaluma yake, alimjibu.
+                
+            </p>
+            <p>
+               "Bwana Alex, ni mapema mno na ni ngumu sana kutoa majibu ya moja kwa moja. Huyu ni mtoto mchanga. Mazingira aliyopitia ni mtihani hata kwa mtu mzima. Tunahitaji muda wa kufanya uchunguzi wa kina wa mifumo yake ya mwili... Lakini tunafanya kila tuwezalo. Nipe nafasi nifanye kazi yangu." <br> <br>
+
+​Alexander alimsogelea daktari, macho yake yakiwa mekundu. "Daktari nakuomba... fanya chochote. Gharama sio tatizo kwangu, hilo unalifahamu. Tumia uwezo wako wote, huyu mtoto lazima apone!" <br> <br>
+
+​"Sawa," Daktari alihema kwa nguvu, "Tuachie chumba."
+            </p>
+            <p>
+              Alexander alibaki nje, mikono yake ikishika kichwa chake kilichokuwa kinamuuma kwa mawazo. Walinzi wake walisimama tuli, wakishindwa hata kutoa neno la kumfariji bosi wao aliyekuwa amegeuka mtumwa wa hofu. <br> <br>
+​Dakika chache baadaye, sauti ya viatu vya msaidizi wake mkuu, Catherine, ilisikika vikigonga sakafu kwa haraka.
+​"Mkurugenzi!" Catherine aliongea akihema, tabasamu jembamba la matumaini likichora usoni mwake. "Kuna habari njema. Mkeo amezinduka!" <br> <br>
+​Alexander alisimama ghafla. Wingu la giza lilionekana kutawanyika kwa sekunde chache usoni mwake. Haraka, alimgeukia mlinzi wake mkuu.
+
+
+            </p>
+            <p>
+               "Simon, sikiliza kwa makini," sauti ya Alexander ilikuwa ya kimamlaka. "Ulinzi wote wa hapa ubaki chini yako. Hakuna inzi anayeruhusiwa kusogelea mlango wa chumba cha huyu mtoto mpaka matibabu yakamilike. Naenda kumuona mke wangu. Umenielewa?" <br> <br>
+​"Nimekuelewa, Boss," Simon alijibu kwa ukakamavu.
+</p>
+<p>
+    Safari ya kuelekea hospitali ya pili ilikuwa kama kufumba na kufumbua. Alexander aliingia moja kwa moja kwenye chumba cha wagonjwa mahututi (ICU). Kumuona Maya, mkewe, akiwa amefumbua macho, kulivunja ngome yote ya ujasiri wa kiume aliyokuwa nayo. <br> <br>
+
+​Machozi ya furaha na maumivu yalimlenga. Alipiga magoti kando ya kitanda chake, akishika mkono wa Maya uliokuwa dhaifu. Maya alimtazama tu, machozi yakimtiririka kimya kimya kwenye mashavu yake.
+    </p>
+    <p>
+        "Nisamehe sana, mke wangu..." Alexander alinong'ona, sauti yake ikipasuka kwa majuto. "Nastahili adhabu. Nimeshindwa kuwa mlinzi wa familia yangu. Najilaumu kwa kusababisha matatizo kwa watu wasio na hatia... Inaniuma sana, Maya." <br> <br>
+​Maya alijitahidi kuvuta pumzi, sauti yake ikiwa nyepesi na yenye upole ulioficha maumivu makali. "Usijilaumu mume wangu... halikuwa kosa lako."
+        </p>
+        <p>
+            Lakini Alexander hakuweza kujisamehe. "Tumepoteza mimba nane mfululizo, Maya. Hii ilikuwa ni faraja yetu. Inaniuma kuona nimekuwa sababu ya janga hili." <br>
+​Kauli hiyo ilikuwa kama msumari kwenye kidonda bichi. Maya aliangua kilio kizito. Kumbukumbu za mateso ya miaka mingi kutafuta mtoto zilirejea kwa kasi. <br> <br>
+​"Niliuliza kuhusu binti yetu, sikupata jibu," Maya alikaza sauti, akimkodolea macho mumewe. "Naomba uniambie... Shani yuko wapi?"
+</p>
+
+<p> 
+    Swali hilo lilimkaba Alexander. "Siku mbili baada ya tukio... leo ameonekana mtoto. Bado sijapata nafasi ya kumuona kwa kuwa madaktari wanapambana kuokoa maisha yake. Akizinduka na nikithibitisha ni yeye..." <br> <br>
+
+​Maya alimkatisha kwa mshangao uliojaa mantiki kali, "Siku mbili? Alexander, mtoto wa mwezi mmoja akae baharini siku mbili? Bila maziwa? Bila joto? Alexander, nataka uniambie ukweli!" <br> <br>
+​"Pumzika kwa sasa," Alexander alimbembeleza kwa haraka, akijaribu kuficha hofu yake mwenyewe. "Nitahakikisha kila kitu kinakuwa sawa. Subiri kwanza." <br> <br>
+​Alexander alisimama na kumfuata daktari wa Maya, akimpa maagizo makali ya kuhakikisha usalama wa Maya na mtoto wao wa kiume, Xavier, ambaye alikuwa amelazwa hapo hapo.
+</p>
+
+<p>
+    Wakiwa kwenye gari wakirudi hospitali alikolazwa mtoto mchanga, ukimya ulikuwa mzito. Alexander alimtazama Catherine.
+​"Cath... unahisi napaswa kujutia hiki kilichoikumba familia yangu?"
+​"Hapana, Boss. Haikuwa makosa yako," Catherine alijibu kwa weledi.
+​"Lakini nimesababisha maafa," Alexander alisisitiza, akitazama nje ya dirisha. "Sio kwa familia yangu tu. Viongozi, serikali... watu wamepoteza maisha kwa sababu ya sherehe yangu. Halafu mimi nipo hai. Unadhani naweza kuliepuka hili?"
+​"Kisheria, tumeanza kushughulikia hili tangu siku ya kwanza," Catherine alimtuliza. "Serikali inaelewa ilikuwa ni ajali. Uchunguzi utafanyika, lakini hakuna kibaya kitakachokupata. Usiwe na wasiwasi na hilo."
+    </p>
+    
+    <p>
+        "Kuna jambo lingine," Alexander alishusha kioo cha gari kidogo, upepo ukimpiga usoni. "Sijamuona huyu mtoto. Mazingira yananipa wasiwasi. Lakini pia... nawaza. Vipi kama amepata ulemavu au majeraha ya kudumu? Shani ni mrembo sana, Cath. Nilitamani abaki hivyo, asipate tatizo lolote usoni au mwilini." <br> <br>
+
+​Catherine alimtazama kwa huruma. "Usijali, Boss. Kila kitu kitakuwa sawa." <br> <br>
+​Wakati matajiri na wapinzani wa kibiashara wakiandaa mikakati ya kumwangamiza Alexander kupitia janga hili, bahari ilikuwa na mipango yake.
+</p>
+
+<p>
+    Mbali sana, katikati ya bahari isiyofikiwa na chombo chochote cha kibinadamu, maajabu yalikuwa yamejificha.
+​Taswira inahamia chini ya maji. Kadiri kina kinavyozidi kuwa kirefu, ndivyo mwanga wa jua unavyomehwa na kiza cha bluu nzito, kisha kugeuka giza totoro. Lakini ghafla, kwenye kina ambacho hakuna binadamu aliyewahi kufika, mwanga wa ajabu unaanza kupenya. <br> <br>
+
+​Kamera ya maono inatuingiza ndani ya mapango makubwa ya chini ya bahari na kutufungulia pazia la mji mkubwa wa siri. Ni mji uliojengwa kwa umahiri usioelezeka; majengo yakimeremeta kwa miamba ya thamani, lulu zinazotoa mwanga wenyewe, na nakshi za matumbawe yaliyopangwa kwa urembo wa kifalme. Mijongeo ya viumbe wa ajabu ikionekana kwa mbali, wakiogelea na kutembea katika ngome hii iliyotengwa na dunia ya juu.
+</p>
+
+<p>
+   Ndani ya chumba kimoja kilichopambwa kwa dhahabu za baharini, sauti za viumbe wawili zilisikika zikijadili kwa usiri mkubwa. ​Sauti ya mwanamke, yenye mwangwi mzito na mamlaka, ilisikika: <br> <br>
+
+​"Ni kweli ulichoniambia... Huyu mtoto atatufaa sana. Hili limekuwa hitaji letu kwa miaka yote. Sasa, hazina yetu inakwenda kurejeshwa, na hatimaye... tutarudisha kila tulichokipoteza kutoka kwa wale wa juu!" <br> <br>
+
+Je nini kinanedelea? Mtoto aliyeko hospitali ni nani? Na mtoto anayeongelewa na hivi viumbe ni yupi? Fuatilia sehemu ya 4
+</p>
+
+            <!-- Mwisho wa aya za hadithi -->
+        </article>
+
+        <!-- FOOTER YA HADITHI (Navigation ya sura inayofuata) -->
+        <div class="mt-16 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs text-zinc-500">Umesoma Sehemu ya 3 </span>
+            <div class="flex gap-4">
+                <!-- Kama sura ya pili ni ya kulipia, inaweza kumpeleka premium.html au WhatsApp -->
+                <a href="free.html" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 text-xs font-bold px-6 py-3 rounded-xl transition uppercase tracking-wider">
+                    Soma Sehemu ya 4 (Bure) &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- MAIN FOOTER -->
+    <footer class="border-t border-zinc-800 bg-neutral-950 py-10 text-center text-xs text-zinc-500">
+        <p class="mb-2">&copy; 2026 Dreamax Studios. Haki zote zimehifadhiwa.</p>
+        <p>Dar es Salaam, Tanzania</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Script ya Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Script ya kubadilisha ukubwa wa herufi (Font Size Tool)
+        function changeFontSize(action) {
+            const container = document.getElementById('story-container');
+            const currentSize = window.getComputedStyle(container).fontSize;
+            let newSize = parseFloat(currentSize);
+
+            if (action === 'large' && newSize < 24) {
+                newSize += 2;
+            } else if (action === 'small' && newSize > 14) {
+                newSize -= 2;
+            }
+            container.style.fontSize = newSize + 'px';
+        }
+    </script>
+</body>
+</html>

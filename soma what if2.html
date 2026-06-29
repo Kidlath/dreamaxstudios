@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma: What If...| Dreamax Studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Font ya herufi za hadithi yenyewe ili iwe rahisi kusoma kwa muda mrefu */
+        .story-text { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-neutral-950 text-zinc-100 min-h-screen flex flex-col justify-between">
+
+
+
+
+
+    <!-- NAVIGATION BAR (Sawa na kurasa zingine zote kwa ulinganifu) -->
+    <nav class="border-b border-zinc-800 bg-neutral-950/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-full border border-zinc-700 bg-zinc-800 flex items-center justify-center overflow-hidden">
+                        <img src="img/Dreamax logo.png" class="h-full w-full object-cover">
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-wide">Dreamax <span class="text-amber-500">Studios</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-zinc-400 hover:text-white transition pb-1">Nyumbani</a>
+                    <a href="free.html" class="text-amber-500 border-b-2 border-amber-500 pb-1">Hadithi za Bure</a>
+                    <a href="premium.html" class="text-zinc-400 hover:text-white transition pb-1">Hadithi za Kulipia</a>
+                    <a href="about.html" class="text-zinc-400 hover:text-white transition pb-1">Kuhusu Sisi</a>
+                    <a href="contact.html" class="text-zinc-400 hover:text-white transition pb-1">Wasiliana Nasi</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://wa.me/255700000000" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold px-5 py-2 rounded-full text-xs transition uppercase tracking-wider flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-400 hover:text-white focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-zinc-800 bg-neutral-950">
+            <a href="index.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Nyumbani</a>
+            <a href="free.html" class="block text-amber-500 py-2 font-medium">Hadithi za Bure</a>
+            <a href="premium.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Hadithi za Kulipia</a>
+            <a href="about.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Kuhusu Sisi</a>
+            <a href="contact.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Wasiliana Nasi</a>
+            <a href="https://wa.me/255700000000" target="_blank" class="block text-center bg-amber-500 text-neutral-950 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider">WhatsApp Chat</a>
+        </div>
+    </nav>
+
+    <!-- HEADER YA CHINI (Back Button na Zana za Kukuza Maandishi) -->
+    <div class="border-b border-zinc-900 bg-zinc-900/10 py-4">
+        <div class="max-w-3xl mx-auto px-4 flex items-center justify-between text-xs sm:text-sm">
+            <a href="free.html" class="text-zinc-400 hover:text-white transition flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> Rudi kwenye Katalogi
+            </a>
+            <div class="flex items-center gap-3">
+                <span class="text-zinc-500">Ukubwa wa herufi:</span>
+                <button onclick="changeFontSize('small')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A-</button>
+                <button onclick="changeFontSize('large')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A+</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- MAIN READER WRAPPER -->
+    <main class="max-w-3xl mx-auto px-4 py-12 flex-grow">
+        <!-- Taarifa za Juu za Hadithi -->
+        <header class="mb-12 border-b border-zinc-900 pb-8">
+            <span class="text-amber-500 text-xs font-bold tracking-wider uppercase">Sura ya Pili: Tembo & Twiga</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-4">What If I Am A Dad?</h1>
+            <div class="flex flex-wrap items-center gap-4 text-xs text-zinc-500">
+                <span>Mwandishi: Dreamax Studios</span>
+                <span>•</span>
+                <span>Muda wa Kusoma: Dakika 20</span>
+            </div>
+        </header>
+
+
+
+
+
+        <!-- SEHEMU YA HADITHI (Ukurasa wa Kusomea) -->
+        <article id="story-container" class="story-text text-zinc-300 leading-relaxed text-base sm:text-lg space-y-6">
+            <!-- Weka aya zako zote za hadithi hapa -->
+            <p>
+                Miaka ilizidi kusonga mbele kama mawingu yanayosukumwa na upepo, lakini lile swali la ndani ya fikra zangu kuhusu sura mbili za baba yangu liliendelea kukua ndani yangu sawa na kimo changu. Hata hivyo, maisha hayakutupa nafasi ya kutulia na kutafakari sana. Na hapo ndipo sura mpya ilipofunguliwa ghafla, na upepo wa mabadiliko ukapiga kwenye familia yetu.
+            </p>
+            <p>
+                Baba alikuwa ofisa wa polisi, na katika kazi kama hizi, maisha yako mara nyingi huamuliwa na barua ya uhamisho tu kutoka kwa wakuu wako. Siku moja, amri ikatoka. Ilibidi tufungashe virago na kuuaga upepo mwanana wa bahari ya kisiwa cha Zanzibar, kuelekea kusikojulikana, au niseme tu ni Tanzania Bara. Huu ulikuwa zaidi ya uhamisho wa kikazi kwa baba, kwetu sisi, ilikuwa ni kung'oa mizizi ile ya shida na mitafaruku na kupandikizwa kwenye ardhi mpya kabisa. Maisha ya upande wa pili wa bahari yalikuwa yameanza.
+                
+            </p>
+            <p>
+                Mwaka huo wa 2010 ulikuja na mtihani wake wa kipekee sana uliolenga moja kwa moja ndoto zangu za utotoni. Nikiwa Zanzibar, nilikuwa nimeshapiga hatua kubwa kimasomo. Nilikuwa darasa la kwanza, nikijiona tayari ni "kaka" mkubwa mwenye kuelewa mambo. Nilitarajia kuendelea na kasi hiyo huku Bara, lakini mfumo na mazingira mapya yalikuwa na mipango tofauti kabisa na nilivyowaza mimi.
+
+            </p>
+            <p>
+                Nilipofikishwa shuleni, uamuzi ulitolewa. Uamuzi ambao uliuvunja kabisa moyo wangu huo mdogo kwa wakati huo. Nilirudishwa nyuma kidarasa. Nilitakiwa kuanza tena upya kabisa, nilianza darasa la awali.
+
+            </p>
+            <p>
+                Unajua bwana, hadithi nyingi za maisha ya watu huwa zinaandikwa na watu tofauti kabisa. Pengine kama nisingerudishwa, basi leo hii nisingepata kusimulia hadithi za watu mbali mbali ambao nilikutana nao hapo. Pengine ingekua ni wengine labda, ila sijui kwa maana sikuishi hayo maisha. Wakati huo, nilikasirika na kuona waalimu hawakunitendea haki kabisa. Niliichukia Tumbi Primary school kwa kitendo walichonifanyia kwa maana sikuridhika na huo uamuzi kabisa. Lakini, ningefanyaje sasa? Sikua na budi kukubali uhalisia.
+</p>
+<p>
+    Nakumbuka siku ya kwanza nikiwa nimekaa kwenye madawati madogo, nimezungukwa na watoto waliokuwa wadogo kwangu kiumri na kiakili. Nikiwa na akili ya darasa la kwanza, kulazimishwa kujifunza tena vitu nilivyokwisha vipita ilikuwa kama adhabu ya kisaikolojia kwangu. Ilikuwa inakatisha sana tamaa.
+    </p>
+    <p>
+        Ilionekana kana kwamba maisha yalikuwa yakiniambia, <i>"Yassir, rudi nyuma. Anza upya." </i> Lakini kwa jicho la sasa, ninaona kuwa ule ulikuwa msingi wangu wa kwanza wa kujifunza uvumilivu. Ilinibidi nimeze kiburi changu cha utotoni, nikubali uhalisia wangu mpya, na kuanza kusuka njia yangu upya kutoka sifuri katika ardhi ngeni. Ardhi ya ugenini. 
+        </p>
+        <p>
+            Huku Bara kulikuwa tofauti sana. Hakukuwa na vichochoro nilivyovizoea kule Zanzibar, hakukuwa na wale marafiki zangu wa zamani. Ilikuwa ni mimi, elimu yangu iliyorudishwa nyuma, na familia ileile yenye majeraha yake yaliyofichwa chini ya zulia.
+</p>
+<p>​
+Mizigo yetu tuliyohama nayo ilivuka bahari salama kabisa, lakini cha kusikitisha ni kwamba, zile kuta za chuki, hasira, na maumivu kati ya baba na mama nazo zilifunga virago na kusafiri pamoja nasi. Tuliingia kwenye nyumba mpya huku Bara, lakini mandhari pekee ndiyo yaliyobadilika. Picha ya ndani ilibaki kuwa ileile. Migogoro haikuisha, ilibadilisha tu uwanja wa mapambano.
+</p>
+<p>
+    Lakini maisha yangu ya nje yalilazimika kuendelea. Nikiwa nimeyakubali matokeo ya kuanzishwa upya darasa la awali, nilianza kutengeneza marafiki wapya na kujenga ulimwengu wangu mpya wa kitoto. Shuleni hapo, darasa letu la awali lilikuwa limegawanywa sehemu mbili zilizopewa majina ya wanyama wakubwa. Darasa langu liliitwa Twiga, na lile la pili liliitwa Tembo.
+</p>
+<p>
+    Kwenye ulimwengu ule wa watoto, kila jamii ina mfalme wake. Hilo ni wazi na liko karibia duniani kote. Kule upande wa Tembo, kulikuwa na mfalme mmoja ambaye jina lake pekee lilitosha kabisa kutuliza kelele za watoto uwanjani. Aliitwa Atanas Yunus Said (Si jina halisi), lakini kwa ukubwa na ubabe wake, wote tulimjua kwa jina la utani, "Babu".
+</p>
+
+<p>
+    Babu hakuwa mtoto wa kawaida. Alikuwa ni mbabe haswa. Alitembea kwa mikogo ya kitoto iliyojaa mamlaka, na ule mwili wake mnene uliojaa nyama za kutosha ulizidi kuwatisha wengi. Alitawala madawati kwa maana ya madarasa yote hayo mawili pamoja na viwanja vya michezo kwa mkono wake wa chuma. Kila nilipokaa kwenye dawati langu huku Twiga, marafiki zangu wapya walinisongelea na kuninong'oneza stori za kutisha kumhusu Babu. Walinipa onyo baada ya onyo.
+​"Sikiliza... Usiwe unamwangalia usoni, hapendi kushobokewa" mmoja alisema kwa hofu. "Akikufuata, we mpe tu anachotaka usilete ubishi."
+    
+</p>
+<p>
+    Lakini hawakujua mimi nilikotoka. Hawakujua kwamba giza nililoshuhudia sebuleni kwetu lilikuwa limeshanijengea ukuta mgumu kifuani mwangu. Sikuwa na asili ya fujo, nilikuwa mkimya sana, lakini ulikuwa ni ukimya wa mtu anayejiamini. Sikuwa na hofu yoyote juu ya huyo Babu. Machoni mwangu, alikuwa wa kawaida tu kama watoto wengine.
+</p>
+<p>
+    Akili yangu ilikuwa tayari imeshakomaa kabla ya wakati wake. Kwa mtoto ambaye alishuhudia mikiki mikiki ya machozi na kuparurana kwa watu wazima ndani ya nyumba yake mwenyewe, ubabe wa kizamani wa viwanja vya shule haukuwa na nguvu ya kunitetemesha hata magoti. Niliweka msimamo wangu wazi ndani ya moyo wangu. Niko tayari kupambana naye, kwa namna yoyote ile, ikiwa ataleta ufalme wake kwenye himaya yangu. <br> <br>
+​Nilikaa kwenye dawati langu la Twiga, mkimya lakini macho yangu yakiwa makini, nikimsubiri huyu "Babu" wa darasa la Tembo ajaribu kuvuka mipaka yake.
+    </p>
+    <p>
+        Kushushwa darasa na kurudishwa kuanza upya awali ilionekana kama adhabu, lakini kiuhalisia, ilinipa faida moja kubwa sana, akili yangu ilikuwa imeshakomaa kuvuka kiwango kile. Wakati watoto wengine wakihangaika kushika penseli na kutambua herufi, mimi nilikuwa nikijibu maswali ya mwalimu kwa wepesi sana na uliowashangaza wengi. Lakini akili darasani haikuwa silaha yangu peke yake, nilikuwa na kitu kingine cha ziada kilichowateka zaidi, kipaji cha kuchora.
+</p>
+<p>
+    Wakati wa mapumziko au vipindi vya ziada, dawati langu liligeuka kuwa kituo cha maonesho. Vidole vyangu vilicheza na kalamu tu, vikichora picha ambazo kwa macho ya watoto wale wa awali, zilionekana kama maajabu yaliyoshushwa kutoka mbinguni. Michoro yangu ilianza kuzunguka darasani, kisha ikavuka mipaka na kuingia madarasa mengine. Ghafla, jina langu likaanza kuimbwa. Sikuwa tena yule mgeni mkimya aliyetoka Zanzibar, wengi walinita mpemba, ila nilikuwa nikitambulika kama "yule mtoto anayechora vizuri na kujibu maswali bila kukosea". Umaarufu ulinivaa kama joho.
+    </p>
+    <p>
+        Lakini katika ulimwengu huu wa shule ya msingi, umaarufu hauji bila gharama. Ufalme wangu wa kipaji na akili ulianza kutishia ufalme wa hofu alioujenga Atanas Yunus, yule "Babu" wa darasa la Tembo. Kule kuimbwa kwangu kote kulimfikia masikioni mwake, na kama ilivyo asili ya dikteta yeyote anayehisi mamlaka yake yanapinduliwa, ilibidi achukue hatua ya kuninyamazisha.
+</p>
+<p>
+    Siku ya tukio ilikuwa ya joto mno, upepo mkavu ukivuma na kunyanyua vumbi jepesi kwenye uwanja wa shule. Kengele ya mapumziko ilikuwa imelia, na kama kawaida, nilikuwa nimesimama uwanjani, labda nikiwa nimezungukwa na kikundi cha watoto wakinitazama. Babu alikuja akiwa ameongozana na "wapambe" wake. Hatua zake zilikuwa za kibabe, uso wake ukiwa umekunjamana kwa hasira ya wivu uliomla kwa ndani.
+    </p>
+    
+    <p>
+        Aliposimama mbele yangu, uwanja mzima ulionekana kutulia. Watoto waliokuwa wakicheza kibe na kuruka kamba waliacha. Kama kwa makubaliano ya chinichini, walianza kusogea, mmoja baada ya mwingine, na kutengeneza duara kubwa, zito, na lenye kelele nyingi. Walituweka mtu kati. Huu ulikuwa ulingo wa kiasili kabisa, hakukuwa na kamba, bali ukuta wa watoto waliokuwa wakipiga kelele na kushangilia wakitaka kuona damu.
+        </p>
+        
+        <p>​
+        "Nasikia wewe ndio unajifanya unajua sana humu shuleni," Babu alitamka huku akisogeza kifua chake mbele, akijaribu kunitisha kwa umbo lake lililokuwa kubwa kiasi. Alikua kibonge na mwenye nyama nyingi
+​Sikujibu neno lolote. Macho yangu yalilitazama kundi lile la watoto waliokuwa wakishangilia, kisha nikamtazama yeye. Babu hakujua kitu kimoja, hakuwa anapigana na mtoto wa kawaida wa darasa la awali kama alivyofikiria. Alikuwa anapigana na mtoto ambaye kifua chake kilikuwa kimebeba maumivu mengi ya mama yake anayewapigania ndani ya nyumba. Alikuwa anapigana na mtoto ambaye tayari alishayaona mapambano makubwa zaidi ya maisha nyumbani kwao. Hasira niliyokuwa nimeifungia kwa muda mrefu dhidi ya udhaifu wa baba yangu na maisha yale, ghafla ilipata mahali pa kutokea.
+</p>
+
+<p>
+    Babu alirusha ngumi ya kwanza kwa kushtukiza, akilenga usoni mwangu. Niliikwepa kwa wepesi na uharaka wa kiwango cha juu, na kabla hajavuta mkono wake, nilijibu pigo. ​Vumbi lilitimka. Vita ililipuka haswa. Kelele na shangwe za watoto wengine zilizidi kusikika. Sikuwa napigana kwa staili za kitoto za kuvutana mashati, hizi zilikuwa ngumi nzito, ngumi za kiwango cha juu zilizojaa hasira na dhamira ya kutoshindwa.
+    </p>
+    
+    <p>
+        Tulianguka chini, tukagalagala kwenye lile vumbi jekundu, tukapigana vikumbo, lakini kila alipojaribu kunikandamiza, nguvu ya ajabu kutoka ndani yangu ilinisukuma juu. Sauti za watoto zilizokuwa zikiimba jina la Babu zilianza kubadilika, wakashikwa na butwaa, na kisha taratibu wakaanza kuimba jina langu.
+        </p>
+        
+        <p>
+            Kila ngumi niliyomshushia Babu ilikuwa kama tangazo rasmi la utambulisho wangu mpya. Mwishowe, akiwa amehema kwa nguvu, akiwa ametapakaa vumbi na uso wake ukionyesha dhahiri kushindwa, Babu alikata tamaa. Alijiengua na kurudi nyuma, akishindwa kuendelea.
+​Ukimya mfupi ulitawala kwa sekunde chache, kabla ya uwanja mzima kulipuka kwa kelele za shangwe na nderemo. Watoto walinirukia, wengine wakinipigapiga mgongoni. Yule mbabe aliyetetemesha madarasa yale mawili alikuwa ameshushwa kwenye kiti chake cha enzi na mtoto mkimya wa darasa la Twiga.
+</p>
+
+<p>
+    Siku ile, sikushinda tu ngumi dhidi ya Babu. Bali nilishinda uhuru wangu. Jina langu lililipuka shuleni hapo na kuwa kubwa kuliko umbo langu. Niligeuka kuwa shujaa. Niliheshimiwa sio tu kwa michoro yangu mizuri kwenye karatasi, bali kwa picha niliyoichora kwa ngumi zangu kwenye uwanja wa mapambano, picha ya mwanaume anayeweza kusimama na kujilinda mwenyewe.
+    </p>
+    
+    <p>
+        Na hapo, swali langu lile la msingi lilianza kupata mwanga mpya. Ikiwa siku moja nitakuwa baba, nitamtaka mwanangu ajue jinsi ya kujisimamia. Ajue kwamba hata akiwa mkimya vipi, hapaswi kumruhusu mtu yeyote kumfanya awe mnyonge.
+</p>
+
+<p>
+    Ushindi wangu uwanjani dhidi ya Atanas Yunus ulikuwa zaidi ya sifa za shuleni. Ulikuwa ni ufunguo uliofungua mlango wa gereza langu la kisaikolojia. Nilirudi nyumbani siku ile nikiwa na mtazamo mpya kabisa kuhusu dunia. Nilikuwa nimejifunza somo kubwa ambalo liliniathiri moja kwa moja. Watu wababe sio miungu, wakisimamiwa imara, wanasambaratika.
+    </p>
+    
+    <p>
+        Hili somo halikubaki shuleni. Lilifuatana na mimi mpaka mlangoni kwetu, liliingia sebuleni, na kuketi nami kila nilipokuwa nikiwatazama wazazi wangu. Vumbi la uwanjani lilikuwa limenitoka, lakini ujasiri ulikuwa umeota mizizi kifuani mwangu. Sasa, nilipoitazama ndoa ya wazazi wangu, sikuiona tena tu kwa jicho la mtoto anayeogopa. Nilianza kuona kwa jicho la mlinzi. ​Nilianza kuona waziwazi jinsi baba alivyokuwa akimkandamiza mama. Kila neno lake la dharau, kila ukali aliomwonyesha mama bila sababu za msingi, sasa havikuonekana kama mamlaka ya mzazi, bali kama ubabe wa mtu anayetumia nguvu zake kuumiza mtu dhaifu. Ile picha ya "baba mzuri anayenitembeza mitaani" ilifutika kabisa akilini mwangu. Ilibadilishwa na sura ya mdhalimu ndani ya nyumba yangu mwenyewe. Ndani yangu, mbegu ya kiburi ilianza kuota, kiburi kilichokuwa ni ngao yangu ya kumtetea mama.
+        </p>
+        
+        <p>
+            Sikuwa tena yule mtoto mkimya aliyekaa tu pembeni na kulia wakati baba akimfokea mama. Kile kimya changu kiligeuka kuwa sumu, na subira yangu ilifika mwisho.
+​Siku moja, kimbunga kililipuka. Sauti ya baba ilikuwa imepanda sana, akimtolea mama maneno makali yaliyojaa dharau kama kawaida yake. Lakini safari hii, kabla mama hajajibu kwa sauti yake iliyojaa uchovu, sauti nyingine ilikata hewa ya chumba kile. Ilikuwa ni sauti yangu.
+</p>
+
+<p>​
+"Acha kumfanyia hivyo!" nilisema kwa sauti iliyotetemeka kwa hasira, lakini yenye msimamo wa chuma. ​Baba aligeuka, macho yake yakiwa yamewaka kwa mshangao. Kwa sekunde kadhaa, aliniangalia kana kwamba alikuwa hamtambui huyu mtoto aliyesimama mbele yake. Kwenye utamaduni wetu, na kwa mtu wa hadhi yake ya kipolisi, mtoto kumjibu mzazi ilikuwa ni uhaini wa hali ya juu. Lakini sikujali. Hofu ilikuwa imekufa siku nyingi.
+</p>
+
+<p>
+    Alipojaribu kunifokea na kunitaka nifunge mdomo, nililipuka kwa sauti ya juu zaidi. Sikuwa tayari kumruhusu atawale mazungumzo. Aliongea neno, nami nilijibu maneno mawili. Alipandisha sauti, nilipandisha sauti zaidi yake. Kila jambo aliloliongea nililijibu kwa ukali na hasira kuu iliyokuwa imejikusanya kwa miaka mingi tangu tukiwa Zanzibar, tangu zile siku za kula viazi vitamu asubuhi na mchana wakati akihudumia nyumba nyingine.
+    </p>
+    
+    <p>​
+    "Huwezi kuendelea kumtesa bi mkubwa!" Nakumbuka wakati nikimfokea, kifua changu kilipanda na kushuka kwa kasi. Macho yangu yalikuwa yamemkodolea, yakimtoboa bila kupepesa. ​Tulijibishana uso kwa uso. Sikuwa namwona kama ofisa wa polisi, wala sikuwa namwona kama mzazi, nilimwona kama mwanaume aliyeshindwa majukumu yake anayejaribu kutumia vitisho kuficha udhaifu wake. Kila alipojaribu kutoa amri, niliikataa kwa maneno makali. Ndani ya chumba kile, nilijivua utoto na kuvaa joho la uanaume uliolazimishwa kukua kabla ya wakati wake.
+    </p>
+    
+    <p>
+        Kiburi changu kwake kilikuwa ni silaha yangu pekee ya kumpa mama heshima ambayo hakupatiwa na mume wake. Katika majibizano yale yaliyojaa chuki na hisia mbichi, nilijitazama kwa jicho la tatu na kujiuliza tena, What if I am a dad? Ikiwa nitakuja kuwa baba, sitawahi, chini ya anga hili, kumfanya mwanangu asimame mbele yangu kwa hasira kiasi hiki kumtetea mama yake.
+        </p>
+        
+        <p>
+            Sitatengeneza maadui ndani ya damu yangu mwenyewe. <br> <br>
+​Baba alibaki amesimama, akikosa neno la mwisho dhidi ya ujasiri wangu uliomzidi nguvu. Ufalme wake wa hofu ndani ya nyumba ulikuwa umepata ufa ambao haungeweza kuzibwa tena.
+</p>
+<p>Inaendelea...
+</p>
+           
+           
+           
+           
+           
+           
+            <!-- Mwisho wa aya za hadithi -->
+        </article>
+
+        <!-- FOOTER YA HADITHI (Navigation ya sura inayofuata) -->
+        <div class="mt-16 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs text-zinc-500">Umesoma Sura ya 2</span>
+            <div class="flex gap-4">
+                <!-- Kama sura ya pili ni ya kulipia, inaweza kumpeleka premium.html au WhatsApp -->
+                <a href="free.html" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 text-xs font-bold px-6 py-3 rounded-xl transition uppercase tracking-wider">
+                    Soma Sura ya 3 (Bure) &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    
+    
+    
+    
+
+    <!-- MAIN FOOTER -->
+    <footer class="border-t border-zinc-800 bg-neutral-950 py-10 text-center text-xs text-zinc-500">
+        <p class="mb-2">&copy; 2026 Dreamax Studios. Haki zote zimehifadhiwa.</p>
+        <p>Dar es Salaam, Tanzania</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Script ya Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Script ya kubadilisha ukubwa wa herufi (Font Size Tool)
+        function changeFontSize(action) {
+            const container = document.getElementById('story-container');
+            const currentSize = window.getComputedStyle(container).fontSize;
+            let newSize = parseFloat(currentSize);
+
+            if (action === 'large' && newSize < 24) {
+                newSize += 2;
+            } else if (action === 'small' && newSize > 14) {
+                newSize -= 2;
+            }
+            container.style.fontSize = newSize + 'px';
+        }
+    </script>
+</body>
+</html>
