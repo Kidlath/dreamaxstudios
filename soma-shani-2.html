@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma: Shani...| Dreamax Studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Font ya herufi za hadithi yenyewe ili iwe rahisi kusoma kwa muda mrefu */
+        .story-text { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-neutral-950 text-zinc-100 min-h-screen flex flex-col justify-between">
+
+    <!-- NAVIGATION BAR (Sawa na kurasa zingine zote kwa ulinganifu) -->
+    <nav class="border-b border-zinc-800 bg-neutral-950/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-full border border-zinc-700 bg-zinc-800 flex items-center justify-center overflow-hidden">
+                        <img src="img/Dreamax logo.png" class="h-full w-full object-cover">
+                    </div>
+                    <span class="text-lg font-bold text-white tracking-wide">Dreamax <span class="text-amber-500">Studios</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-zinc-400 hover:text-white transition pb-1">Nyumbani</a>
+                    <a href="free.html" class="text-amber-500 border-b-2 border-amber-500 pb-1">Hadithi za Bure</a>
+                    <a href="premium.html" class="text-zinc-400 hover:text-white transition pb-1">Hadithi za Kulipia</a>
+                    <a href="about.html" class="text-zinc-400 hover:text-white transition pb-1">Kuhusu Sisi</a>
+                    <a href="contact.html" class="text-zinc-400 hover:text-white transition pb-1">Wasiliana Nasi</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://wa.me/255700000000" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 font-bold px-5 py-2 rounded-full text-xs transition uppercase tracking-wider flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-zinc-400 hover:text-white focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-zinc-800 bg-neutral-950">
+            <a href="index.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Nyumbani</a>
+            <a href="free.html" class="block text-amber-500 py-2 font-medium">Hadithi za Bure</a>
+            <a href="premium.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Hadithi za Kulipia</a>
+            <a href="about.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Kuhusu Sisi</a>
+            <a href="contact.html" class="block text-zinc-400 hover:text-white py-2 font-medium">Wasiliana Nasi</a>
+            <a href="https://wa.me/255700000000" target="_blank" class="block text-center bg-amber-500 text-neutral-950 font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider">WhatsApp Chat</a>
+        </div>
+    </nav>
+
+    <!-- HEADER YA CHINI (Back Button na Zana za Kukuza Maandishi) -->
+    <div class="border-b border-zinc-900 bg-zinc-900/10 py-4">
+        <div class="max-w-3xl mx-auto px-4 flex items-center justify-between text-xs sm:text-sm">
+            <a href="free.html" class="text-zinc-400 hover:text-white transition flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> Rudi kwenye Katalogi
+            </a>
+            <div class="flex items-center gap-3">
+                <span class="text-zinc-500">Ukubwa wa herufi:</span>
+                <button onclick="changeFontSize('small')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A-</button>
+                <button onclick="changeFontSize('large')" class="px-2.5 py-1 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 font-semibold text-xs">A+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN READER WRAPPER -->
+    <main class="max-w-3xl mx-auto px-4 py-12 flex-grow">
+        <!-- Taarifa za Juu za Hadithi -->
+        <header class="mb-12 border-b border-zinc-900 pb-8">
+            <span class="text-amber-500 text-xs font-bold tracking-wider uppercase">Sehemu ya Pili: Hasira ya bahari na mwanga wa matumaini
+             </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-4">Shani</h1>
+            <div class="flex flex-wrap items-center gap-4 text-xs text-zinc-500">
+                <span>Mwandishi: Dreamax Studios</span>
+                <span>•</span>
+                <span>Muda wa Kusoma: Dakika 15</span>
+            </div>
+        </header>
+
+        <!-- SEHEMU YA HADITHI (Ukurasa wa Kusomea) -->
+        <article id="story-container" class="story-text text-zinc-300 leading-relaxed text-base sm:text-lg space-y-6">
+            <!-- Weka aya zako zote za hadithi hapa -->
+            <p>
+               Bahari ilikuwa imepoteza ustaarabu wake. Mawimbi makubwa yalinyanyuka kama kuta za giza yakibeba ghadhabu ya dunia kana kwamba miungu ya kale ilikuwa imekasirika na kulipiza kisasi. Radi ilinguruma kwa kishindo cha kutisha, upepo ukirarua ukimya na kuzipiga helikopta za uokoaji kama vipepeo waliokwama kwenye kimbunga kizito. Kila jitihada za kuokoa maisha ya wahanga wale ziligonga mwamba, helikopta ziliyumba angani zikilazimika kurudi kwa dharura, huku meli za uokozi zikibaki kutetemeka kwa hofu mbele ya nguvu ile ya asili. Bahari iligeuka kuwa kiumbe hai kisicho na huruma, katili, kilichokuwa na kiu ya kumeza roho za wasio na hatia.
+
+            </p>
+            <p>
+                Baada ya masaa mawili ya mateso, hasira ya upepo ule wa bahari ilianza kupungua. Helikopta zilirudi kwa kasi ya ajabu, zikipasua mawingu kama ndege wawindaji ili kufidia muda uliopotea. Mashua za uokoaji zikachana mawimbi kwa mara nyingine na kurudi katika misheni ile ya uokozi. Ghafla, sauti ya redio ya mawasiliano ikapasua ukimya wa wasiwasi uliokuwepo:
+​"Tumeona miili... lakini subiri! Kuna walionusurika! Mtoto mmoja amepatikana!"
+                
+            </p>
+            <p>
+               Alikuwa ni Xavier. Mvulana mdogo aliyeshikilia roho yake kwa ujasiri usioelezeka, akiwa ameambatana na mama yake. Wote walikuwa hoi, miili yao imejaa majeraha, lakini walikuwa bado wanapumua. Walikimbizwa hospitali haraka kwa dharura. Lakini pigo lilikuwa zito bado, baba wa familia, Alexander, na binti mdogo, Shani, walikuwa wamemezwa na kiza cha bahari na hawakupatikana.
+
+            </p>
+            <p>
+              Siku mbili za ukimya ule mzito uliotokana na janga la bahari zilipita. Taifa zima liligubikwa na wingu la sintofahamu. Kwenye kambi ya uokoaji huko pwani, mlinda usalama wa kampuni ya Alexander ambao waliokua wakifanya jitihada kuhakikisha tajiri huyo na binti yake wanapatikana, alionekana kukimbia kuingia kwenye hema la kiongozi wa operation hiyo, akihema kwa wasiwasi kana kwamba ameona mzimu.
+
+
+            </p>
+            <p>
+                “Kiongozi! Tumepata mawasiliano! GPS ya Alexander inaonesha kuwaka!” <br<
+​Afande John alisimama kwa mshituko. <br>
+“Inaonyesha wapi?”
+Alijibiwa, <br>
+​“Yupo bahari ya kina kirefu, umbali wa takriban kilomita 170 kutoka hapa. Lakini afande, hali ya hewa huko ni hatari sana kwa vyombo vyetu...” <br>
+​Afande John aligonga meza na kusema kwa amri na kauli nzito. “Hatuzungumzii hali ya hewa hapa! Tunazungumzia uhai wa mtu unaelewa hilo?. Vikosi visogee sasa hivi, tujipange kwaajili ya operation hii!”
+</p>
+<p>
+    Kwenye kisiwa kimoja kilichosahaulika huko mbali katikati ya bahari, Alexander alikuwa amelala kwenye mchanga baridi. Sura yake ilikuwa imefubaa, mikono yake ikijifuta maji ya chumvi yaliyochanganyikana na machozi usoni mwake. Nguo zake zilikuwa zimelowa tititi, ngozi yake ikiungua chini ya jua kali, lakini ndani ya moyo wake kulikuwa na baridi la mauti. Alikuwa mtu anayepumua, lakini roho yake ilikuwa imekufa. Hakutoa sauti yoyote. Machozi yalijitengenezea njia kwenye mashavu yake, machozi ya maumivu na majuto ya baba aliyepoteza kila kitu. Alijilaza kwenye mchanga, nguvu zote zikimwisha, akibakiwa tu na picha ya binti yake mchanga aliyesombwa na mawimbi.
+    </p>
+    <p>
+        Masaa machache baadaye, mlio wa helikopta ulimwamsha kutoka kwenye usingizi wa majonzi. Waokoaji walimkimbilia kama lulu iliyopotea, wakambeba kama mfalme aliyejeruhiwa vitani, na kumkimbiza kwenye hospitali kuu kwa matibabu ya haraka zaidi. 
+
+​Wakati huo huo, kwenye ukumbi wa kifahari wa mikutano wa kampuni ya Alexander, joto lilikuwa kali sana. Siyo la hali ya hewa, bali la hofu na tamaa za wawekezaji.
+        </p>
+        <p>
+            Msaidizi Mkuu: “Wawekezaji watano tayari wametishia kujitoa. Wanasema tumezembea na maisha ya watu mashuhuri yamewekwa rehani. Wanataka kutoa hisa zao leo leo.” <br>
+
+​Mjumbe 1: “Presha inazidi kunipanda! Hebu tumieni rasilimali zote kumpata Alexander. Bila yeye, hii kampuni ni jengo tu!.” <br>
+
+​Mjumbe 2: “Tukipoteza uaminifu huu, basi tumekwisha. Wapinzani wetu tayari wameanza kujipanga kutumia janga hili kutuangamiza sokoni, na watatumia kama udhaifu wetu” <br>
+
+</p>
+
+<p> Mjadala ulizidi kupamba moto mpaka pale mlango mzito wa ukumbi ulipofunguliwa. Kimya chenye mfano wa makaburini kilitawala ghafla. Kila mtu alisimama, midomo ikiwa wazi lakini hakuna neno lililotoka. <br> <br>
+
+​Ni Alexander.
+​Alitembea kwa hatua nzito, suti yake ikiwa imebadilishwa lakini sura yake ikiwa imechoka, macho yake yakiwaka maumivu makali yaliyoshindwa kufichika. Alisimama mbele ya meza na kuwatazama kwa ukimya uliotoboa roho zao. Alipumua kwa nguvu na kusema kwa sauti yenye mamlaka na uchungu:
+</p>
+
+<p>
+    Alexander: “Anayetaka kuchukua hisa zake, mlango uko wazi. Sina kinyongo. Lakini msithubutu kufanya siasa juu ya damu yangu. Mke wangu... watoto wangu... wale si bidhaa zenu za biashara. Je, mnafikiri mimi sina uchungu? Baada ya mke wangu kupoteza mimba nane mfululizo, halafu zawadi pekee niliyopewa na Mungu inachukuliwa mbele ya macho yangu kama tonge kinywani... msihukumu msichokijua.”
+    </p>
+    
+    <p>
+        Watu wote waliinamisha vichwa vyao kwa aibu. Daktari wake aliingia kwa hofu na kumwambia. <br>
+
+​Daktari: “Mheshimiwa, mwili wako bado uko dhaifu sana. Unahitaji kupumzika na kufanyiwa uchunguzi wa kina.” <br>
+
+​Alexander: “Niko salama. Siwezi kupumzika wakati mwanangu hajapatikana. Kamati ya ulinzi, nataka maandalizi ya msako wa Shani. Leo hii!.”
+</p>
+
+<p>
+    Wakati vyombo vya habari vikilipuka na taarifa za mshtuko za kurejea kwa tajiri Alexander, mbali sana katika mwambao wa pili wa bahari, kijiji kimoja cha wavuvi kilikuwa kwenye hekaheka. Kitu kilionekana kikiwa kinaelea kwenye kipande cha mbao chakavu. Wavuvi walikimbia na nyavu zao.
+</p>
+
+<p>
+    “Jamani! Ni mtoto! Leteni blanketi haraka!” <br> 
+    mayowe yalisikika. Walipomkaribia, mtoto huyo alikuwa amejikunyata kwa baridi kali, akihema kwa shida, ashindwe hata kupata nguvu ya kulia. Lakini nyuma ya kundi hilo la wavuvi, alisimama mwanaume mmoja mgeni kijijini hapo, akiwa amevalia koti jeusi lililochakaa. Macho yake yalikuwa yamemkazia yule mtoto, na tabasamu la siri likachora usoni mwake kabla hajapotelea kimya kimya kwenye vichaka. <br>
+
+​Je, mtoto huyu ni Shani? Na huyu mgeni aliyejitokeza hapa ni nani, na ana mipango gani katikati ya mkasa huu? <br> <br>
+
+Fuatilia sehemu ya 3
+</p>
+
+            <!-- Mwisho wa aya za hadithi -->
+        </article>
+
+        <!-- FOOTER YA HADITHI (Navigation ya sura inayofuata) -->
+        <div class="mt-16 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs text-zinc-500">Umesoma Sehemu ya 2 </span>
+            <div class="flex gap-4">
+                <!-- Kama sura ya pili ni ya kulipia, inaweza kumpeleka premium.html au WhatsApp -->
+                <a href="free.html" class="bg-amber-500 hover:bg-amber-600 text-neutral-950 text-xs font-bold px-6 py-3 rounded-xl transition uppercase tracking-wider">
+                    Soma Sehemu ya 3 (Bure) &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- MAIN FOOTER -->
+    <footer class="border-t border-zinc-800 bg-neutral-950 py-10 text-center text-xs text-zinc-500">
+        <p class="mb-2">&copy; 2026 Dreamax Studios. Haki zote zimehifadhiwa.</p>
+        <p>Dar es Salaam, Tanzania</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Script ya Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Script ya kubadilisha ukubwa wa herufi (Font Size Tool)
+        function changeFontSize(action) {
+            const container = document.getElementById('story-container');
+            const currentSize = window.getComputedStyle(container).fontSize;
+            let newSize = parseFloat(currentSize);
+
+            if (action === 'large' && newSize < 24) {
+                newSize += 2;
+            } else if (action === 'small' && newSize > 14) {
+                newSize -= 2;
+            }
+            container.style.fontSize = newSize + 'px';
+        }
+    </script>
+</body>
+</html>
